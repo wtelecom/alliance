@@ -19,11 +19,33 @@ body {
   }
 }
 .bar-color {
-  background-color: #474747;
+  background-color: #474747 !important;
   border-color: transparent;
+}
+@media (max-width: 768px) {
+  .bar-color {
+    background-color: #D11216;
+  }
+  .navbar-top-links {
+    background-color: #AA0609;
+  }
 }
 .navbar-default .navbar-brand {
   color: #FFF;
+  background-color: #EAEAEA;
+}
+.navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  color: #FFF;
+}
+.navbar-brand:hover {
+  color: #FFF;
+}
+.navbar-brand sup {
+  top: -0.1em;
+  font-size: 39%;
 }
 .navbar-top-links {
   margin-right: 0;
@@ -85,22 +107,56 @@ body {
   border-color: transparent;
   color: #FFF;
 }
+.sub-navbar {
+  width: 100%;
+  max-height: 33px;
+}
+.sub-navbar > a {
+  color: #FFF;
+}
+.breadcrumb {
+  border-radius: 0px;
+  background-color: #666;
+  margin-bottom: 0px;
+}
+.breadcrumb > li + li:before {
+  color: #AAA;
+}
+.breadcrumb > .active {
+  color: #FFF;
+  font-weight: bold;
+}
+.breadcrumb > a {
+  color: #FFF !important;
+}
+.label-menu-corner .label {
+  font-size: 10px;
+  line-height: 12px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
 .sidebar .sidebar-nav.navbar-collapse {
   padding-left: 0;
   padding-right: 0;
+  overflow-x: hidden;
+  border-bottom: 1px solid transparent;
 }
 .sidebar .sidebar-apps {
   padding: 15px;
   background-color: #FFF;
-  border-bottom: 3px solid #EC0F0F;
+  border-bottom: 3px solid #D11216;
 }
-.sidebar ul li {
-  border-bottom: 1px solid #e7e7e7;
+.sidebar ul li a {
+  color: #666;
+  font-size: 0.95em;
 }
 .sidebar ul li a.active {
   margin-right: -1px;
-  border-left: 5px solid #EC0F0F;
+  border-left: 5px solid #D11216;
   background-color: #FFF;
+  font-weight: bold;
 }
 .sidebar .arrow {
   float: right;
@@ -126,7 +182,7 @@ body {
     z-index: 1;
     position: absolute;
     width: 250px;
-    margin-top: 51px;
+    margin-top: 84px;
   }
   .navbar-top-links .dropdown-messages,
   .navbar-top-links .dropdown-tasks,
@@ -312,4 +368,14 @@ table.dataTable thead .sorting:after {
 }
 .panel-yellow a:hover {
   color: #df8a13;
+}
+.dropdown-menu {
+  border-radius: 0;
+}
+.sidebar-apps > .dropdown-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.sidebar-apps > .dropdown-menu > li > a {
+  padding: 10px 20px;
 }
